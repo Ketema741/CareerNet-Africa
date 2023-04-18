@@ -48,7 +48,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const authContext = useContext(AuthContext);
-  const { isSupplierAuthenticated, supplier, logout } = authContext;
+  const { isUserAuthenticated, user, logout } = authContext;
 
   const {
     currentColor,
@@ -95,7 +95,7 @@ const Navbar = () => {
       />
 
       <div className="flex">
-        {isSupplierAuthenticated ?
+        {isUserAuthenticated ?
           <Fragment>
             <NavButton
               title="Cart"
