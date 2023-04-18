@@ -1,7 +1,7 @@
 import {
     REGISTER_SUCCESS,
     REGISTER_FAIL,
-    SUPPLIER_LOADED,
+    USER_LOADED,
     AUTH_ERROR,
     LOGIN_SUCCESS,
     SET_CURRENT,
@@ -12,7 +12,7 @@ import {
   
   const authReducer = (state, action) => {
     switch (action.type) {
-      case SUPPLIER_LOADED:
+      case USER_LOADED:
         return {
           ...state,
           isUserAuthenticated: true,
@@ -55,11 +55,7 @@ import {
           ...state,
           error: null,
         };
-      case SET_CURRENT:
-        return {
-          ...state,
-          currentSupplier: action.payload,
-        };
+     
       default:
         throw new Error(`Unsupported type of: ${action.type}`);
     }
