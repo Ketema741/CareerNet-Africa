@@ -15,19 +15,17 @@ import {
       case SUPPLIER_LOADED:
         return {
           ...state,
-  
-          isSupplierAuthenticated: true,
-          supplierLoading: false,
-          supplier: action.payload,
+          isUserAuthenticated: true,
+          userLoading: false,
+          user: action.payload,
         };
       case REGISTER_SUCCESS:
         localStorage.setItem('token', action.payload.token);
         return {
           ...state,
           ...action.payload,
-  
-          isSupplierAuthenticated: true,
-          supplierLoading: false,
+          isUserAuthenticated: true,
+          userLoading: false,
         };
       case LOGIN_SUCCESS:
         localStorage.setItem('token', action.payload.token);
@@ -35,8 +33,8 @@ import {
           ...state,
           ...action.payload,
   
-          isSupplierAuthenticated: true,
-          supplierLoading: false,
+          isUserAuthenticated: true,
+          userLoading: false,
         };
       case REGISTER_FAIL:
       case AUTH_ERROR:
@@ -47,9 +45,9 @@ import {
           ...state,
           token: null,
   
-          isSupplierAuthenticated: false,
-          supplierLoading: false,
-          supplier: null,
+          isUserAuthenticated: false,
+          userLoading: false,
+          user: null,
           error: action.payload,
         };
       case CLEAR_ERRORS:
