@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Logo from "../../assets/logo.svg";
 
 import welcome from "../../assets/undraw_welcome_cats_thqn.svg";
@@ -20,6 +20,20 @@ const RegistrationForm = () => {
     event.preventDefault();
     userRegister(user, []);
   };
+  const { error, isUserAuthenticated, loadUser } = authContext;
+
+  useEffect(() => {
+    if (isUserAuthenticated) {
+      loadUser();
+      console.log("loged in");
+      navigate("/");
+    }
+    if (error === "Invalid Credentials") {
+      // setAlert(error, 'danger');
+    }
+
+    // eslint-disable-next-line
+  }, [error, isUserAuthenticated]);
 
   return (
     <div className="mt-14 min-w-screen  bg-white flex items-center justify-center px-5 py-1">
