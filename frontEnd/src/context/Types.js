@@ -15,6 +15,7 @@ export const GET_USER = 'GET_USER';
 export const SET_CURRENT = 'SET_CURRENT';
 
 export const GET_POSTS = 'GET_POSTS';
+export const GET_POST = 'GET_POST';
 export const GET_POSTDETAILS = 'GET_POSTDETAILS';
 export const GET_RECENTPOSTS = 'GET_RECENTPOSTS';
 export const GET_CATEGORIES = 'GET_CATEGORIES';
@@ -27,5 +28,6 @@ export const SUBMITCOMMENT = 'SUBMITCOMMENT';
 export const FILTER_POSTS = 'FILTER_POSTS';
 export const CLEAR_FILTER = 'CLEAR_FILTER';
 export const CLEAR_CURRENT = 'CLEAR_CURRENT';
+export const CLEAR_POSTS = 'CLEAR_POSTS';
 export const POST_ERROR = 'POST_ERROR';
 

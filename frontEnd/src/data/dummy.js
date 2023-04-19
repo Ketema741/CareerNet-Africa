@@ -14,7 +14,10 @@ import { FaBusinessTime, FaUniversity, FaRegCompass } from 'react-icons/fa'
 import { GiSkills, GiBookshelf, GiBodyBalance,GiSandsOfTime, GiHabitatDome } from 'react-icons/gi'
 import { GrNavigate } from 'react-icons/gr'
 
-
+export const Categories =[
+ 'Software',
+ 'Tech',
+]
 export const schedule = [
   {
     icon: <MdOutlineWork />,

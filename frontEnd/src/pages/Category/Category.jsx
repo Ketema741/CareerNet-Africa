@@ -7,7 +7,6 @@ import Jobs from '../Job/Jobs'
 import MeetingSchedule from '../Guidance/meetingSchedule'
 
 const Category = () => {
-
     const {
         setCurrentColor,
         setCurrentMode,
