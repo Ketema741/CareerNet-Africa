@@ -13,9 +13,10 @@ const Blog = require("../models/Blog");
 // @access    Public
 router.get("/", async (req, res) => {
   try {
-    const blogs = await Blog.find().sort({
-      date: -1,
-    });
+    const blogs = await Blog.find()
+      .sort({ date: -1, })
+      .populate("user", "firstName userImage bio email ")
+
     res.json(blogs);
   } catch (err) {
     console.error(err.message);
@@ -28,7 +29,8 @@ router.get("/", async (req, res) => {
 // @access   Public
 router.get("/:id", async (req, res) => {
   try {
-    let blog = await Blog.findById(req.params.id);
+    let blog = await Blog.findById(req.params.id)
+      .populate("user", "firstName userImage bio email ")
     if (!blog) return res.status(404).json({ msg: req.params.id });
     res.json(blog);
   } catch (err) {
@@ -88,13 +90,13 @@ router.post(
 router.put("/:id", Auth, async (req, res) => {
   const {
     title,
-      excerpt,
-      description,
-      category,
-      summary,
-      steps,
-      takeaways,
-      timeline,
+    excerpt,
+    description,
+    category,
+    summary,
+    steps,
+    takeaways,
+    timeline,
   } = req.body;
 
   // Build blog object

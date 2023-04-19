@@ -8,11 +8,10 @@ const BlogSchema = new Schema({
 	},
 	category: {
 		type: String,
-		default: "Education"
+		required: true
 	},
 	blogImages: {
 		type: [Object],
-		
 	},
 	title: {
 		type: String,
@@ -43,7 +42,6 @@ const BlogSchema = new Schema({
 	},
 	comments: {
 		type: [String],
-		required: true
 	},
 
 	date: {

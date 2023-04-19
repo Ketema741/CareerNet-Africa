@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose')
 
 const UserSchema = mongoose.Schema ({
-    University: {
+    university: {
         type:String,
         default:"Addis Ababa University"
     },
