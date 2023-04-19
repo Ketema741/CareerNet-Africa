@@ -81,8 +81,7 @@ const AuthState = (props) => {
       },
     };
 
-    try {
-      const res = await axios.post('api/authuser', formData, config);
+    try { const res = await axios.post('api/auth-user', formData, config);
 
       dispatch({
         type: LOGIN_SUCCESS,
@@ -105,12 +104,11 @@ const AuthState = (props) => {
   const logout = () => dispatch({ type: LOGOUT });
 
   // load user
-  const
-    loadUser = async () => {
+  const loadUser = async () => {
       if (localStorage.token) {
         setAuthToken(localStorage.token);
       }
-      const res = await axios.get('api/authuser');
+      const res = await axios.get('api/auth-user');
 
       try {
         dispatch({

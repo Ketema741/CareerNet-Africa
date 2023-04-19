@@ -22,13 +22,10 @@ const Login = (props) => {
 
     const { email, password } = user;
     // const { setAlert } = alertContext;
-    const { userLogin, error,
-        isUserAuthenticated,
-        loadUser } = authContext;
+    const { userLogin, error, setAlert, isUserAuthenticated, loadUser } = authContext;
 
     useEffect(() => {
-        if (
-            isUserAuthenticated) {
+        if (isUserAuthenticated) {
 
             loadUser()
             console.log('loged in')
@@ -39,8 +36,7 @@ const Login = (props) => {
         }
 
         // eslint-disable-next-line
-    }, [error,
-        isUserAuthenticated, props.history]);
+    }, [error, isUserAuthenticated, props.history]);
 
     const onChange = (e) =>
         setUser({ ...user, [e.target.name]: e.target.value });

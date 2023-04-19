@@ -6,6 +6,7 @@ import {
     CLEAR_POSTS,
     CLEAR_FILTER,
     POST_ERROR,
+    SET_CURRENT
   } from '../Types';
 
   
@@ -34,7 +35,7 @@ import {
       case SET_CURRENT:
         return {
           ...state,
-          current: action.payload,
+          blog: action.payload,
         };
       case CLEAR_CURRENT:
         return {
@@ -44,8 +45,9 @@ import {
       case FILTER_POSTS:
         return {
           ...state,
-          filtered: state.blogs.filter(({ title, location }) => {
-            const testString = `${title}${location}`.toLowerCase();
+          filtered: state.blogs.filter(({ title, category }) => {
+            const testString = `${title}${category}`.toLowerCase();
+            console.log(testString);
             return testString.includes(action.payload.toLowerCase());
           }),
         };

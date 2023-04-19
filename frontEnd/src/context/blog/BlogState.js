@@ -12,6 +12,7 @@ import {
   CLEAR_POSTS,
   CLEAR_FILTER,
   POST_ERROR,
+  UPDATE_POST
 } from '../Types';
 
 const Blogstate = (props) => {
@@ -37,13 +38,35 @@ const Blogstate = (props) => {
       dispatch({
         type: POST_ERROR,
         payload: err.response.msg,
+
       });
+      console.log({'erro':err})
+    }
+  };
+
+  // update blogs
+  const updatePost = async () => {
+    try {
+      const res = await axios.put('api/blogs');
+      dispatch({
+        type: UPDATE_POST,
+        payload: res.data,
+      });
+    } catch (err) {
+      dispatch({
+        type: POST_ERROR,
+        payload: err.response.msg,
+
+      });
+      console.log({'erro':err})
     }
   };
 
 
+
   // Get blog
   const getBlog = async (_id, category) => {
+    filterBlogs(category)
     try {
       const res = await axios.get(`api/blogs/${_id}`);
       dispatch({
@@ -57,8 +80,6 @@ const Blogstate = (props) => {
       });
     }
   };
-
-  
 
   // clear posts
   const clearPosts = () => {
@@ -96,6 +117,7 @@ const Blogstate = (props) => {
         filtered: state.filtered,
         getBlogs,
         getBlog,
+        updatePost,
         clearPosts,
         setCurrent,
         clearCurrent,

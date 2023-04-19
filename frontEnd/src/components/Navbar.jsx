@@ -97,12 +97,7 @@ const Navbar = () => {
       <div className="flex">
         {isUserAuthenticated ?
           <Fragment>
-            <NavButton
-              title="Cart"
-              customFunc={() => handleClick("cart")}
-              color={currentColor}
-              icon={<FiShoppingCart />}
-            />
+           
 
             <div className="hidden sm:block">
               <NavButton

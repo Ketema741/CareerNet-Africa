@@ -49,7 +49,7 @@ const App = () => {
               {/* dashboard  */}
               <Route path="/" element={<Home />} />
               <Route path="/blogs" element={<Blogs />} />
-              <Route path="/blog-detail" element={<BlogDetail />} />
+              <Route path="/blog/:blogId" element={<BlogDetail />} />
 
               <Route path="/Category" element={<Category />} />
               <Route path="/login" element={<Login />} />

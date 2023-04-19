@@ -37,7 +37,6 @@ const Profile = () => {
     }, []);
 
     return (
-
         <div className={currentMode === "Dark" ? "dark" : ""}>
             <div className="flex relative dark:bg-main-dark-bg">
                 <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
@@ -68,17 +67,17 @@ const Profile = () => {
                             : "bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 "
                     }
                 >
-                    {user &&
+                    {user != null ? (
                         <Fragment>
                             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
-                                <Navbar name={user.name} currentColor={currentColor} />
+                                <Navbar name={user.firstName} currentColor={currentColor} />
                             </div>
                             <div>
                                 {themeSettings && <ThemeSettings />}
                                 <div className="mt-24 container mx-auto my-5 p-5">
                                     <div className="md:flex gap-2 no-wrap md:-mx-2 ">
                                         <div className="w-full md:w-3/12 md:mx-2">
-                                            <ProfileCard currentColor={currentColor} name={user.name} />
+                                            <ProfileCard currentColor={currentColor} name={user.firstName} />
                                             <div className="my-8"></div>
                                         </div>
                                         <div className="w-full md:w-9/12 mx-2 h-64">
@@ -90,6 +89,9 @@ const Profile = () => {
                                 </div>
                             </div>
                         </Fragment>
+                    )
+                        :
+                        (<div> No user</div>)
                     }
 
                 </div>

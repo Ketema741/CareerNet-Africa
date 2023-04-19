@@ -20,7 +20,7 @@ const HeaderCarousel = () => {
 
                         <div className="mt-10 flex justify-center ">
                             <a href="#read" >
-                                <svg class="animate-bounce w-8 h-8  ">
+                                <svg class="z-0 animate-bounce w-8 h-8  ">
                                     <BsArrowDown className='text-3xl text-blue-800 ' />
                                 </svg>
                             </a>

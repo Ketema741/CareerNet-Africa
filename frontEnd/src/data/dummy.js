@@ -15,8 +15,11 @@ import { GiSkills, GiBookshelf, GiBodyBalance,GiSandsOfTime, GiHabitatDome } fro
 import { GrNavigate } from 'react-icons/gr'
 
 export const Categories =[
- 'Software',
- 'Tech',
+ {name:'Internship'},
+ {name:'Resume'},
+ {name:'Experience'},
+ {name:'Study'},
+ {name:'Education'},
 ]
 export const schedule = [
   {

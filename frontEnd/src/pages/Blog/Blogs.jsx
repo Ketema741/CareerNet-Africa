@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 
 import { Link } from 'react-router-dom';
-
+import blogContext from '../../context/blog/blogContext';
 
 import { Navbar, Footer, Sidebar } from '../../components';
 import { useStateContext } from '../../context/ContextProvider';
@@ -12,28 +12,16 @@ import Header from './Header';
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 import { useQuery, gql } from '@apollo/client';
+import BlogContext from './../../context/blog/blogContext';
 
-
-
-
-const GET_POSTS = gql`
-  query MyQuery {
-    posts {
-      author {
-        bio
-        createdAt
-        photo {
-          url
-        }
-      }
-    }
-  }
-`;
 
 
 
 const Blogs = () => {
-  
+
+  const blogContext = useContext(BlogContext)
+  const { blogs, getBlogs } = blogContext
+
 
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu } = useStateContext();
 
@@ -44,10 +32,11 @@ const Blogs = () => {
       setCurrentColor(currentThemeColor);
       setCurrentMode(currentThemeMode);
     }
+    getBlogs()
+    console.log(blogs)
   }, []);
 
-  const { error, loading, data } = useQuery(GET_POSTS);
-  console.log({ error, loading, data });
+
 
 
 
@@ -79,7 +68,14 @@ const Blogs = () => {
 
           <div className="mt-24 text-gray-900  pr-0 pb-14 pl-0">
             <div id="read" className="w-full pt-2 pr-5 pb-6 pl-5 mt-0 mr-auto mb-0 ml-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
-              <BlogCard />
+              <div className="grid grid-cols-12 sm:px-5 gap-x-8 gap-y-16">
+
+                {blogs &&
+                  blogs.map(blog => (
+                    <BlogCard blog={blog} />
+                  ))
+                }
+              </div>
             </div>
           </div>
           {/* <CarouselCard /> */}
