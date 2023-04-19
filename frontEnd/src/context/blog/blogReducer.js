@@ -6,7 +6,8 @@ import {
     CLEAR_POSTS,
     CLEAR_FILTER,
     POST_ERROR,
-    SET_CURRENT
+    SET_CURRENT,
+    GET_JOBS
   } from '../Types';
 
   
@@ -16,6 +17,15 @@ import {
         return {
           ...state,
           blogs: action.payload,
+          
+        };
+      case GET_JOBS:
+        return {
+          ...state,
+          jobs: state.blogs.filter(({ title, category }) => {
+            const testString = `${title}${category}`.toLowerCase();
+            return testString.includes(action.payload.toLowerCase());
+          }),
         };
       
       case GET_POST:
@@ -47,7 +57,6 @@ import {
           ...state,
           filtered: state.blogs.filter(({ title, category }) => {
             const testString = `${title}${category}`.toLowerCase();
-            console.log(testString);
             return testString.includes(action.payload.toLowerCase());
           }),
         };

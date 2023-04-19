@@ -12,12 +12,14 @@ import {
   CLEAR_POSTS,
   CLEAR_FILTER,
   POST_ERROR,
-  UPDATE_POST
+  UPDATE_POST,
+  GET_JOBS
 } from '../Types';
 
 const Blogstate = (props) => {
   const initialState = {
     blogs: null,
+    jobs: null,
     relatedPost: null,
     blog: null,
     current: null,
@@ -81,6 +83,12 @@ const Blogstate = (props) => {
     }
   };
 
+
+  // get jobs
+  const getJobs = (text) => {
+    dispatch({ type: GET_JOBS, payload: text });
+  };
+
   // clear posts
   const clearPosts = () => {
     dispatch({ type: CLEAR_POSTS });
@@ -112,11 +120,13 @@ const Blogstate = (props) => {
     <blogContext.Provider
       value={{
         blogs: state.blogs,
+        jobs: state.jobs,
         blog: state.blog,
         current: state.current,
         filtered: state.filtered,
         getBlogs,
         getBlog,
+        getJobs,
         updatePost,
         clearPosts,
         setCurrent,

@@ -15,6 +15,7 @@ export const GET_USER = 'GET_USER';
 export const SET_CURRENT = 'SET_CURRENT';
 
 export const GET_POSTS = 'GET_POSTS';
+export const GET_JOBS = 'GET_JOBS';
 export const GET_POST = 'GET_POST';
 export const UPDATE_POST = 'UPDATE_POST';
 export const GET_POSTDETAILS = 'GET_POSTDETAILS';

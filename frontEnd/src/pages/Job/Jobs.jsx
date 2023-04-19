@@ -4,7 +4,7 @@ import { useStateContext } from '../../context/ContextProvider';
 
 
 import JobCard from './JobCard'
-import Header from './Header'
+import Header from '../Header'
 
 const Jobs = () => {
     const {
@@ -23,7 +23,6 @@ const Jobs = () => {
 
     return (
         <div>
-            <Header />
             <JobCard />
         </div>
     );

@@ -3,6 +3,7 @@ import Category from './Category/Header';
 
  export { default as Jobs } from './Job/Jobs';
  export { default as JobCard } from './Job/JobCard';
+ export { default as JobPage } from './Job/JobPage';
 
 export { default as Blogs } from './Blog/Blogs';
 // export { default as BlogCard } from './Blog/BlogCard';

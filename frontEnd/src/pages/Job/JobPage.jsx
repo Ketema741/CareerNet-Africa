@@ -1,14 +1,15 @@
 import React, { useEffect, useContext } from 'react';
 
-import { Navbar, Footer, Sidebar } from '../components';
-import { useStateContext } from '../context/ContextProvider';
+import { Navbar, Footer, Sidebar } from '../../components';
+import { useStateContext } from '../../context/ContextProvider';
 
-import Jobs from './Job/Jobs'
+import Jobs from './Jobs'
 import Header from './Header'
-import MeetingSchedule from './Guidance/meetingSchedule'
-import BlogContext from '../context/blog/blogContext';
+import MeetingSchedule from '../Guidance/meetingSchedule'
+import BlogContext from '../../context/blog/blogContext';
 
-const Home = () => {
+
+const JobPage = () => {
 
     const blogContext = useContext(BlogContext)
     const { blogs, getBlogs } = blogContext
@@ -52,7 +53,6 @@ const Home = () => {
                     </div>
                     <div>
                         <Header />
-                        <MeetingSchedule />
                         <Jobs />
                     </div>
                     <Footer />
@@ -62,4 +62,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default JobPage;
