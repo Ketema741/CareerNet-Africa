@@ -7,6 +7,7 @@ import {
   FAQ,
   Home,
   JobPage,
+  JobDetail,
   Blogs,
   BlogDetail,
   Login,
@@ -51,6 +52,7 @@ const App = () => {
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blog/:blogId" element={<BlogDetail />} />
               <Route path="/jobs" element={<JobPage />} />
+              <Route path="/job/:jobId" element={<JobDetail />} />
 
               <Route path="/Category" element={<Category />} />
               <Route path="/login" element={<Login />} />

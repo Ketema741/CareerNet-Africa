@@ -37,7 +37,7 @@ const BlogPost = ({ blog }) => {
           </div>
 
           <div className="flex items-center flex-wrap p-3">
-            <button onClick={handleView} type='button' className=" text-white hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg" style={{ backgroundColor: currentColor }}>
+            <button onClick={()=>handleView()} type='button' className=" text-white hover:scale-105 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg" style={{ backgroundColor: currentColor }}>
               View
             </button>
           </div>

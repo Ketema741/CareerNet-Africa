@@ -1,23 +1,20 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 
 import { Navbar, Footer, Sidebar } from '../../components';
 import { useStateContext } from '../../context/ContextProvider';
-
-import Jobs from './Jobs'
 import Header from './Header'
-import BlogContext from '../../context/blog/blogContext';
+import Jobs from '../Job/Jobs'
+import MeetingSchedule from '../Guidance/meetingSchedule'
 
-
-const JobPage = () => {
-
-    const blogContext = useContext(BlogContext)
-    const { blogs, getBlogs } = blogContext
-    const { setCurrentColor, setCurrentMode, currentMode, activeMenu, } = useStateContext();
-
-
+const JobDetailCard = () => {
+    const {
+        setCurrentColor,
+        setCurrentMode,
+        currentMode,
+        activeMenu,
+    } = useStateContext();
 
     useEffect(() => {
-
         const currentThemeColor = localStorage.getItem('colorMode');
         const currentThemeMode = localStorage.getItem('themeMode');
 
@@ -25,7 +22,6 @@ const JobPage = () => {
             setCurrentColor(currentThemeColor);
             setCurrentMode(currentThemeMode);
         }
-        getBlogs()
     }, []);
 
     return (
@@ -50,10 +46,9 @@ const JobPage = () => {
                     <div className="sticky  md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
                         <Navbar />
                     </div>
-                    <div>
-                        <Header />
-                        <Jobs />
-                    </div>
+
+                    <Header />
+                    <MeetingSchedule />
                     <Footer />
                 </div>
             </div>
@@ -61,4 +56,4 @@ const JobPage = () => {
     );
 };
 
-export default JobPage;
+export default JobDetailCard;

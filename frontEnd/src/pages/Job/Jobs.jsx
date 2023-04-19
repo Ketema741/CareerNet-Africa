@@ -4,7 +4,6 @@ import { useStateContext } from '../../context/ContextProvider';
 
 
 import JobCard from './JobCard'
-import Header from '../Header'
 
 const Jobs = () => {
     const {

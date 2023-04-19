@@ -3,10 +3,14 @@ import { useStateContext } from '../../context/ContextProvider';
 import knowledge from '../../assets/undraw_road_to_knowledge_m8s0.svg'
 import assi from '../../assets/undraw_virtual_assistant_jjo2.svg'
 import learn from '../../assets/undraw_online_learning_re_qw08.svg'
+import { useNavigate } from 'react-router-dom';
 
 const JobCard = ({ post }) => {
-  const { currentColor } = useStateContext();
-
+  const navigate = useNavigate()
+  const handleView = () => {
+    // getBlog(blog._id, blog.category)
+    navigate(`/job/${'job._id'}`)
+  }
   return (
     <div className="mt-24 container px-5 mx-auto">
       {/* demo shit start here */}
@@ -27,7 +31,7 @@ const JobCard = ({ post }) => {
                   Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur
                   ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
                 </p>
-                <a href="#" className="block font-medium text-primary">Know more</a>
+                <button onClick={()=>handleView()} type='button' className="block font-medium text-primary">Know more</button>
               </div>
             </div>
             <div className="lg:col-span-3">
@@ -44,7 +48,7 @@ const JobCard = ({ post }) => {
                   Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur
                   ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
                 </p>
-                <a href="#" className="block font-medium text-primary">Know more</a>
+                <button onClick={()=>handleView()} type='button' className="block font-medium text-primary">Know more</button>
               </div>
             </div>
             <div className="lg:col-span-2">
@@ -65,7 +69,7 @@ const JobCard = ({ post }) => {
                     ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
                   </p>
                 </div>
-                <a href="#" className="block font-medium text-primary">Know more</a>
+                <button onClick={()=>handleView()} type='button' className="block font-medium text-primary">Know more</button>
               </div>
             </div>
             <div className="lg:col-span-2">
@@ -86,7 +90,7 @@ const JobCard = ({ post }) => {
                     ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
                   </p>
                 </div>
-                <a href="#" className="block font-medium text-primary">Know more</a>
+                <button onClick={()=>handleView()} type='button' className="block font-medium text-primary">Know more</button>
               </div>
             </div>
           </div>
