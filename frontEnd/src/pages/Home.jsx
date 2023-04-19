@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 
 import { Navbar, Footer, Sidebar } from '../components';
-import Jobs from './Job/Jobs'
 import { useStateContext } from '../context/ContextProvider';
+
+import Jobs from './Job/Jobs'
+import MeetingSchedule from './Guidance/meetingSchedule'
 
 const Home = () => {
     const {
@@ -50,6 +52,7 @@ const Home = () => {
                     <div>
                         <Jobs />
                     </div>
+                    <MeetingSchedule />
                     <Footer />
                 </div>
             </div>

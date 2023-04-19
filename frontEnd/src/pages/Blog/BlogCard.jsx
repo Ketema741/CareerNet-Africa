@@ -7,8 +7,9 @@ import prodcut4 from '../../assets/undraw_online_learning_re_qw08.svg'
 import prodcut5 from '../../assets/undraw_team_collaboration_re_ow29.svg'
 
 function BlogPost() {
-  const { currentColor, activeMenu, setActiveMenu, screenSize } =
-    useStateContext();
+  const { currentColor } = useStateContext();
+
+  
   return (
 
     <div>
