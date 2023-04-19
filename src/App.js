@@ -2,18 +2,18 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-// import {
-//   AboutUs,
-//   FAQ,
-//   Home,
-//   // Jobs,
-//   Blogs,
-//   BlogDetail,
-//   Login,
-//   Register,
-//   Profile,
+import {
+  AboutUs,
+  FAQ,
+  Home,
+  // Jobs,
+  Blogs,
+  BlogDetail,
+  Login,
+  Register,
+  Profile,
 
-// } from './pages';
+} from './pages';
 
 import { useStateContext } from './context/ContextProvider';
 import AuthState from './context/Auth/AuthState';
@@ -46,7 +46,7 @@ const App = () => {
         <Router>
           <Routes>
             {/* dashboard  */}
-            {/* <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blog-detail" element={<BlogDetail />} />
 
@@ -56,7 +56,7 @@ const App = () => {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/aboutus" element={<AboutUs />} />
 
-            <Route path="/profile" element={<Profile />} /> */}
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Router>
       </AuthState>

@@ -8,9 +8,9 @@ import { FcCollaboration } from 'react-icons/fc'
 import { FaConnectdevelop } from 'react-icons/fa'
 import { SiBookstack } from 'react-icons/si'
 
-import knowledge from '../../brands/undraw_road_to_knowledge_m8s0.svg'
-import assi from '../../brands/undraw_virtual_assistant_jjo2.svg'
-import learn from '../../brands/undraw_online_learning_re_qw08.svg'
+import knowledge from '../../assets/undraw_road_to_knowledge_m8s0.svg'
+import assi from '../../assets/undraw_virtual_assistant_jjo2.svg'
+import learn from '../../assets/undraw_online_learning_re_qw08.svg'
 
 import Service from './Service'
 

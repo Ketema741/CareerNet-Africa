@@ -8,7 +8,7 @@ import { FaFacebookF, FaEnvelope } from 'react-icons/fa';
 import AlertContext from "../../context/alert/alertContext";
 import AuthContext from "../../context/Auth/authContext";
 
-import loginsvg from '../../brands/undraw_access_account_re_8spm.svg'
+import loginsvg from '../../assets/undraw_access_account_re_8spm.svg'
 
 const Login = (props) => {
     const alertContext = useContext(AlertContext);

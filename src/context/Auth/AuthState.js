@@ -19,6 +19,7 @@ const AuthState = (props) => {
   const initialState = {
     user: null,
     token: localStorage.token,
+    currentUser: null,
 
     isUserAuthenticated: null,
     userLoading: true,

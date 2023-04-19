@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from 'react-router-dom'
 import { useStateContext } from "../../context/ContextProvider";
-import prodcut2 from '../../data/product2.jpg'
-import prodcut3 from '../../data/product3.jpg'
-import prodcut4 from '../../data/product4.jpg'
-import prodcut5 from '../../data/product5.jpg'
+import prodcut2 from '../../assets/undraw_connecting_teams_re_hno7.svg'
+import prodcut3 from '../../assets/undraw_road_to_knowledge_m8s0.svg'
+import prodcut4 from '../../assets/undraw_online_learning_re_qw08.svg'
+import prodcut5 from '../../assets/undraw_team_collaboration_re_ow29.svg'
 
 function BlogPost() {
   const { currentColor, activeMenu, setActiveMenu, screenSize } =

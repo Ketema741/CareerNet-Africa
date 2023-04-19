@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Logo from '../../brands/logo.svg';
+import React from 'react';
+import Logo from '../../assets/logo.svg';
 
-import welcome from '../../brands/undraw_welcome_cats_thqn.svg'
+import welcome from '../../assets/undraw_welcome_cats_thqn.svg'
 
 const RegistrationForm = () => {
 
@@ -59,7 +59,7 @@ const RegistrationForm = () => {
                                     </div>
                                     <div className="flex -mx-3">
                                         <div className="w-full px-3 mb-5">
-                                            <button className=" mb-5 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600" type="submit" disabled={!userType}>Next</button>
+                                            <button className=" mb-5 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600" type="submit" >Submit</button>
                                         </div>
                                     </div>
                                 </div>

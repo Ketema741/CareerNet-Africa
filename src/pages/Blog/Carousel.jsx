@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 
 import CarouselItem from './CarouselItem';
 import CarouselIndicator from './CarouselIndicator';
-import card1 from '../data/product1.jpg';
-import card2 from '../data/product2.jpg';
-import card3 from '../data/product3.jpg';
-import card4 from '../data/product4.jpg';
+import svg1 from '../../assets/undraw_team_collaboration_re_ow29.svg';
+import svg2 from '../../assets/undraw_feeling_proud_qne1.svg';
+import svg3 from '../../assets/undraw_questions_re_1fy7.svg';
+import svg4 from '../../assets/undraw_road_to_knowledge_m8s0.svg';
 
-const cards = [card1, card2,card3, card4];
+const cards = [svg1, svg2,svg3, svg4];
 import { IoIosArrowBack } from 'react-icons/io';
 
 function Carousel({ width, height, items }) {

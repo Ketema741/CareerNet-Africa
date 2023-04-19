@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import React from 'react';
 import { BsArrowDown } from 'react-icons/bs';
-import product1 from '../../data/product1.jpg';
-import product2 from '../../data/product2.jpg';
-import product3 from '../../data/product3.jpg';
-
-import resume from '../../brands/undraw_resume_re_hkth.svg'
-import interview from '../../brands/undraw_interview_re_e5jn.svg'
-import job from '../../brands/undraw_job_hunt_re_q203.svg'
-import project from '../../brands/undraw_feeling_proud_qne1.svg'
 
 
-import { FaClock } from 'react-icons/fa';
+import resume from '../../assets/undraw_resume_re_hkth.svg'
+import interview from '../../assets/undraw_interview_re_e5jn.svg'
+import job from '../../assets/undraw_job_hunt_re_q203.svg'
+import project from '../../assets/undraw_feeling_proud_qne1.svg'
+
 
 const HeaderCarousel = () => {
     return (

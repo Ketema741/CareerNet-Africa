@@ -1,5 +1,5 @@
 import React from "react";
-import TeamSpirit from '../../brands/undraw_team_spirit_re_yl1v.svg'
+import TeamSpirit from '../../assets/undraw_team_spirit_re_yl1v.svg'
 
 
 

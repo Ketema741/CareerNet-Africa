@@ -30,7 +30,6 @@ const GET_POSTS = gql`
   }
 `;
 
-import product1 from '../../data/product1.jpg'
 
 
 const Blogs = () => {

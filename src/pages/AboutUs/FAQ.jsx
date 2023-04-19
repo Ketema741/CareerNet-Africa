@@ -4,7 +4,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from '../../components';
 import FAQCard from './FAQCard';
 import { useStateContext } from '../../context/ContextProvider';
-import FAQAnswers from '../../brands/undraw_questions_re_1fy7.svg'
+import FAQAnswers from '../../assets/undraw_questions_re_1fy7.svg'
 
 const FAQ = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import card1 from '../data/product1.jpg';
-import card2 from '../data/product2.jpg';
-import card3 from '../data/product3.jpg';
-import card4 from '../data/product4.jpg';
-import { itemRendering } from '@syncfusion/ej2/treemap';
+
+
+import svg1 from '../../assets/undraw_team_collaboration_re_ow29.svg';
+
+
 import { NavLink } from 'react-router-dom';
 
 export default function Card({ index, activeIndex, item }) {
@@ -41,7 +41,7 @@ export default function Card({ index, activeIndex, item }) {
     >
       <div class=" flex flex-row items-start rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden col-span-12 space-y-3 sm:col-span-6 xl:col-span-4 ">
         <div class="relative w-full">
-          <img src={card1} className="object-cover w-full mb-4 overflow-hidden shadow-sm max-h-56" />
+          <img src={svg1} className="object-cover w-full mb-4 overflow-hidden shadow-sm max-h-56" />
         </div>
 
         <div className="pl-3 pb-1">

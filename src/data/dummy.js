@@ -1,56 +1,43 @@
 import React from 'react';
-import { FiShoppingBag } from 'react-icons/fi';
 import { RiContactsLine } from 'react-icons/ri';
+import { FiShoppingBag, FiCreditCard } from 'react-icons/fi';
+import { BsCurrencyDollar, BsShield } from 'react-icons/bs';
 import { MdOutlineWork, MdOutlineSupportAgent } from 'react-icons/md';
 
 import { FcAbout } from 'react-icons/fc';
 
-
-export const kanbanGrid = [
+export const userProfileData = [
   {
-    headerText: 'To Do',
-    keyField: 'Open',
-    allowToggle: true
+    icon: <BsCurrencyDollar />,
+    title: 'My Profile',
+    url: 'profile',
+    desc: 'Account Settings',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
   },
-
   {
-    headerText: 'In Progress',
-    keyField: 'InProgress',
-    allowToggle: true
+    icon: <BsShield />,
+    title: 'My Inbox',
+    url: 'profile',
+    desc: 'Messages & Emails',
+    iconColor: 'rgb(0, 194, 146)',
+    iconBg: 'rgb(235, 250, 242)',
   },
-
   {
-    headerText: 'Testing',
-    keyField: 'Testing',
-    allowToggle: true,
-    isExpanded: false
-  },
-
-  {
-    headerText: 'Done',
-    keyField: 'Close',
-    allowToggle: true
+    icon: <FiCreditCard />,
+    title: 'My Tasks',
+    url: 'profile',
+    desc: 'To-do and Daily Tasks',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
   },
 ];
 
 
 export const links = [
   {
-    title: 'Home',
-    links: [
-      {
-        name: 'Home',
-        to: '/home',
-        icon: <FiShoppingBag />,
-      },
-    ],
-  },
-
-  {
     title: 'Pages',
     links: [
-      
-     
       {
         name: 'Jobs',
         to: 'jobs',

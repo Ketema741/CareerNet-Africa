@@ -12,6 +12,7 @@ export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 export const GET_USERS = 'GET_USERS';
 export const GET_USER = 'GET_USER';
+export const SET_CURRENT = 'SET_CURRENT';
 
 export const GET_POSTS = 'GET_POSTS';
 export const GET_POSTDETAILS = 'GET_POSTDETAILS';

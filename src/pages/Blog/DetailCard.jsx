@@ -1,10 +1,9 @@
 import React from 'react';
-import product8 from '../../data/product8.jpg';
 import avatar from '../../data/avatar.jpg';
 import BlogTab from './BlogTab'
 import Timeline from './Timeline'
 
-import resume from '../../brands/undraw_road_to_knowledge_m8s0.svg'
+import resume from '../../assets/undraw_road_to_knowledge_m8s0.svg'
 
 const DetailCard = () => {
 
