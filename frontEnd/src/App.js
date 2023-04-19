@@ -17,6 +17,7 @@ import {
 
 import { useStateContext } from './context/ContextProvider';
 import AuthState from './context/Auth/AuthState';
+import BlogState from './context/blog/BlogState';
 
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
@@ -41,25 +42,26 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <AuthState>
+        <BlogState>
 
+          <Router>
+            <Routes>
+              {/* dashboard  */}
+              <Route path="/" element={<Home />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blog-detail" element={<BlogDetail />} />
 
-        <Router>
-          <Routes>
-            {/* dashboard  */}
-            <Route path="/" element={<Home />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blog-detail" element={<BlogDetail />} />
+              <Route path="/Category" element={<Category />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
 
-            <Route path="/Category" element={<Category />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/aboutus" element={<AboutUs />} />
 
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </Router>
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </Router>
+        </BlogState>
       </AuthState>
     </ApolloProvider>
   );
