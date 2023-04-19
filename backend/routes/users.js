@@ -9,8 +9,6 @@ const Auth = require("../middleware/Auth");
 const User = require('../models/User')
 const cloudinary = require("cloudinary");
 
-
-
 // @route     GET api/user
 // @desc      Get all user
 // @access    Public
@@ -52,10 +50,7 @@ router.post(
     check("email", "please include a valid email!").isEmail(),
     check("password", "please enter a password with 6 or more characters")
       .isLength({ min: 6 }),
-    check("phone", "please add phone and phone can not be greater than 10 diigit")
-      .not()
-      .isEmpty()
-      .isLength({ min: 10 }),
+    
 
   ],
   async (req, res) => {

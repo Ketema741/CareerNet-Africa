@@ -6,8 +6,8 @@ import { FaFacebookF, FaEnvelope } from 'react-icons/fa';
 
 // import Alert from "../layouts/Alerts";
 import AlertContext from "../../context/alert/alertContext";
-import AuthContext from "../../context/Auth/authContext";
 
+import AuthContext from "../../context/Auth/authContext";
 import loginsvg from '../../assets/undraw_access_account_re_8spm.svg'
 
 const Login = (props) => {
@@ -40,7 +40,6 @@ const Login = (props) => {
 
     const onChange = (e) =>
         setUser({ ...user, [e.target.name]: e.target.value });
-
     const onSubmit = (e) => {
         e.preventDefault();
         if (email === '' || password === '') {
