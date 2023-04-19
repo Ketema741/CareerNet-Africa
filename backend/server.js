@@ -17,7 +17,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.get("/", (req, res) => {
   res.json({ msg: "hello" });
 }); 
-const PORT =  433;
+const PORT =  6000;
 // Define Routes
 app.use("/api/auth-user", require("./routes/Auth"));
 app.use("/api/blogs", require("./routes/blogs"));

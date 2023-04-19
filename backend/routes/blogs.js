@@ -12,9 +12,10 @@ const Blog = require("../models/Blog");
 // @access    Public
 router.get("/", async (req, res) => {
   try {
-    const blogs = await Blog.find().sort({
-      date: -1,
-    });
+    const blogs = await Blog.find()
+    .sort({ date: -1, })
+    .populate("user", "firstName userImage bio email ")
+
     res.json(blogs);
   } catch (err) {
     console.error(err.message);

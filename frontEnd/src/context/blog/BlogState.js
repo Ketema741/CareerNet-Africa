@@ -29,7 +29,7 @@ const Blogstate = (props) => {
   // Get blogs
   const getBlogs = async () => {
     try {
-      const res = await axios.get('api/blogs');
+      const res = await axios.get('/api/blogs');
       dispatch({
         type: GET_POSTS,
         payload: res.data,
