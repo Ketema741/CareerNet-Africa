@@ -30,7 +30,8 @@ const AuthState = (props) => {
 
   // Register user
   const userRegister = async (formData, images) => {
-    formData.userImage = images;
+    formData.userImage = images || []; // default to an empty array if images is null or undefined
+;
 
     const config = {
       headers: {
@@ -38,7 +39,7 @@ const AuthState = (props) => {
       },
     };
     try {
-      const res = await axios.post('api/users', formData, config);
+      const res = await axios.post('http://localhost:433/api/users', formData, config);
       dispatch({
         type: REGISTER_SUCCESS,
         payload: res.data,
@@ -80,9 +81,10 @@ const AuthState = (props) => {
         'Content-Type': 'application/json',
       },
     };
+   
 
     try {
-      const res = await axios.post('api/authuser', formData, config);
+      const res = await axios.post('http://localhost:6000/api/auth-user', formData, config);
 
       dispatch({
         type: LOGIN_SUCCESS,

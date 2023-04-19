@@ -4,7 +4,6 @@ const { check, validationResult } = require("express-validator");
 const config = require("config");
 
 const Auth = require("../middleware/Auth");
-
 const cloudinary = require("cloudinary");
 const Blog = require("../models/Blog");
 
@@ -13,9 +12,9 @@ const Blog = require("../models/Blog");
 // @access    Public
 router.get("/", async (req, res) => {
   try {
-    const blogs = await Blog.find().sort({
-      date: -1,
-    });
+    const blogs = await Blog.find()
+      .sort({ date: -1 })
+      .populate("user", "firstName userImage bio email "); // populate the user field with name and email only
     res.json(blogs);
   } catch (err) {
     console.error(err.message);
@@ -170,7 +169,6 @@ cloudinary.config({
   api_key: config.get("api_key"),
   api_secret: config.get("api_secret"),
 });
-
 
 router.post("/image", async (req, res) => {
   const { public_id } = req.body;
