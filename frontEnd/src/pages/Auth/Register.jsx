@@ -25,7 +25,6 @@ const RegistrationForm = () => {
   useEffect(() => {
     if (isUserAuthenticated) {
       loadUser();
-      console.log("loged in");
       navigate("/");
     }
     if (error === "Invalid Credentials") {
@@ -103,7 +102,7 @@ const RegistrationForm = () => {
                           type="email"
                           name="email"
                           className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                          placeholder="johnsmith@example.com"
+                          placeholder="ketemagirma@example.com"
                           onChange={onChange}
                         />
                       </div>

@@ -2,7 +2,6 @@ import React from 'react'
 
 import JobSvg from '../../assets/undraw_work_time_re_hdyv.svg'
 
-import Service from './Service'
 
 const Header = () => {
     return (
