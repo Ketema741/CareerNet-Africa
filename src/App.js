@@ -12,7 +12,7 @@ import {
   Login,
   Register,
   Profile,
-
+  Category,
 } from './pages';
 
 import { useStateContext } from './context/ContextProvider';
@@ -50,6 +50,7 @@ const App = () => {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blog-detail" element={<BlogDetail />} />
 
+            <Route path="/Category" element={<Category />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 

@@ -1,4 +1,5 @@
 export { default as Home } from './Home';
+import Category from './Category/Header';
 
  export { default as Jobs } from './Job/Jobs';
  export { default as JobCard } from './Job/JobCard';
@@ -14,3 +15,4 @@ export { default as Profile } from './Profile/Profile';
 
 export { default as AboutUs } from './AboutUs/AboutUs';
 export { default as FAQ } from './AboutUs/FAQ';
+export { default as Category } from './Category/Category';

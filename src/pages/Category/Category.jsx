@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 
-import { Navbar, Footer, Sidebar } from '../components';
-import { useStateContext } from '../context/ContextProvider';
+import { Navbar, Footer, Sidebar } from '../../components';
+import { useStateContext } from '../../context/ContextProvider';
+import Header from './Header'
+import Jobs from '../Job/Jobs'
+import MeetingSchedule from '../Guidance/meetingSchedule'
 
-import Jobs from './Job/Jobs'
-import MeetingSchedule from './Guidance/meetingSchedule'
+const Category = () => {
 
-const Home = () => {
     const {
         setCurrentColor,
         setCurrentMode,
@@ -14,10 +15,7 @@ const Home = () => {
         activeMenu,
     } = useStateContext();
 
-
-
     useEffect(() => {
-
         const currentThemeColor = localStorage.getItem('colorMode');
         const currentThemeMode = localStorage.getItem('themeMode');
 
@@ -49,9 +47,8 @@ const Home = () => {
                     <div className="sticky  md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
                         <Navbar />
                     </div>
-                    <div>
-                        <Jobs />
-                    </div>
+
+                    <Header />
                     <MeetingSchedule />
                     <Footer />
                 </div>
@@ -60,4 +57,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Category;
