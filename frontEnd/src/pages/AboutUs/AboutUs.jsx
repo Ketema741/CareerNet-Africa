@@ -4,9 +4,11 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from '../../components';
 import { useStateContext } from '../../context/ContextProvider';
 import Ketema from '../../assets/me.png'
+import Dawit from '../../assets/dev.png'
+import Fitsum from '../../assets/fitsum.png'
 import Gatwech from '../../data/avatar3.png'
+import joseph from '../../data/joseph.jpg'
 import AboutUsCard from './AboutUsCard';
-
 const AboutUs = () => {
   const {
     setCurrentColor,
@@ -101,7 +103,7 @@ const AboutUs = () => {
                 <div class="group relative rounded-3xl  space-y-6 overflow-hidden">
                   <img
                     class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-                    src={Gatwech}
+                    src={joseph}
                     alt="Joseph"
                     loading="lazy"
                     width="640"
@@ -121,12 +123,13 @@ const AboutUs = () => {
                 <div class="group relative rounded-3xl  space-y-6 overflow-hidden">
                   <img
                     class="mx-auto h-[26rem] w-full grayscale object-cover object-top transition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-                    src={Ketema}
+                    src={Fitsum}
                     alt="Fitsum"
                     loading="lazy"
                     width="640"
                     height="805"
                   />
+                  
                   <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
                     <div>
                       <h4 class="text-xl font-semibold dark:text-gray-700 text-white">Fitsum .</h4>
@@ -141,8 +144,8 @@ const AboutUs = () => {
                 <div class="group relative rounded-3xl  space-y-6 overflow-hidden">
                   <img
                     class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-                    src={Gatwech}
-                    alt="woman"
+                    src={Dawit}
+                    alt="dawit"
                     loading="lazy"
                     width="640"
                     height="805"

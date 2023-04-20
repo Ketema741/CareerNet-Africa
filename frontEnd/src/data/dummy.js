@@ -15,11 +15,10 @@ import { GiSkills, GiBookshelf, GiBodyBalance,GiSandsOfTime, GiHabitatDome } fro
 import { GrNavigate } from 'react-icons/gr'
 
 export const Categories =[
- {name:'Internship'},
+ {name:'Intenships'},
  {name:'Resume'},
- {name:'Experience'},
  {name:'Study'},
- {name:'Education'},
+ {name:'Career Advice'},
 ]
 export const schedule = [
   {
@@ -86,7 +85,6 @@ export const schedule = [
     title: 'Developing relevant skills:',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
-
     pcColor: 'green-600',
   },
   
@@ -106,7 +104,6 @@ export const schedule = [
     title: 'Course and major selection',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
-    
     pcColor: 'green-600',
   },
   {

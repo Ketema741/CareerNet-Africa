@@ -199,7 +199,7 @@ const BlogDetail = () => {
                         <h3 className="text-black mt-4 mb-4 text-xl font-bold">{blog.user.firstName}</h3>
                         <p className="text-white text-ls">{blog.user.bio}</p>
                       </div>
-                      <CommentSection />
+                      <CommentSection blog={blog} />
 
                     </div>
                     <div className="lg:col-span-4 col-span-1">

@@ -55,7 +55,6 @@ const Scheduler = () => {
                         <InlineWidget url="https://calendly.com/kgirma363/30min" />
                         
                     </div>
-                    <Footer />
                 </div>
             </div>
         </div>
