@@ -51,7 +51,7 @@ const JobDetail = () => {
             {/* demo shit */}
             {/* {blog != null ? ( */}
             <div>
-              <div className=" relative pt-16 pb-4 lg:pt-24 dark:bg-gray-900">
+              <div className=" bg-main-bg relative pt-16 pb-4 lg:pt-24 dark:bg-gray-900">
                 <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
                   <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-3xl text-center sm:text-4xl md:text-5xl lg:w-auto lg:text-left xl:text-6xl dark:text-white">
                     {/* {blog.title} */}
@@ -63,7 +63,7 @@ const JobDetail = () => {
                   </h1>
                   <div className="lg:flex">
                     <div className="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
-                      <div className="bg-white shadow-lg rounded-lg pt-6 pb-8 mb-4 px-4 py-8">
+                      <div className=" pt-6 pb-8 mb-4 py-8">
                         <h2 className="text-3xl font-bold text-blue-800 mb-4">
                           Job Title
                         </h2>
@@ -74,7 +74,7 @@ const JobDetail = () => {
                         <h2 className="text-2xl font-bold text-blue-800 mb-4">
                           Job Description:
                         </h2>
-                        <p className="text-gray-700 mb-4 ml-10 mr-32 text-justify">
+                        <p className="text-gray-700 mb-4 ml-10 mr-32 text-justify" style={{zIndex:1000}}>
                           We are seeking a talented web developer to join our
                           team. As a web developer, you will be responsible for
                           designing, developing, and maintaining our company
@@ -159,8 +159,8 @@ const JobDetail = () => {
                       <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
                         <a
                           aria-label="add to slack"
-                          href="#detail"
-                          className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
+                          href="https://a2sv.org/"
+                          className="p-4 border  dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
                         >
                           <div className="flex justify-center space-x-4">
                             <SiBookstack
@@ -182,11 +182,12 @@ const JobDetail = () => {
                         ></div>
                         <img
                           src={Blog}
-                          className="relative w-full"
+                          className="relative ml-24 w-full overflow-hidden"
                           alt="wath illustration"
                           loading="lazy"
                           width="320"
                           height="280"
+                          style={{width:"600px",zIndex:0}}
                         />
                       </div>
                     </div>
