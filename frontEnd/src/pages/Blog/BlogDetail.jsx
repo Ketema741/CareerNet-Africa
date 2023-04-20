@@ -5,7 +5,7 @@ import { Navbar, Footer, Sidebar } from '../../components';
 import DetailCard from './DetailCard';
 import CommentSection from './Comment'
 import { useStateContext } from '../../context/ContextProvider';
-// import Carousel from './Carousel';
+import Carousel from './Carousel';
 import { Link } from 'react-router-dom'
 
 import blogbg from '../../assets/blog/bg7.jpg'
@@ -120,7 +120,6 @@ const BlogDetail = () => {
           </div>
           <div className="mt-4 container mx-auto">
 
-            {/* demo shit */}
             {blog != null ? (
               <div>
                 <div className=" relative pt-16 pb-4 lg:pt-24 dark:bg-gray-900">
@@ -174,7 +173,6 @@ const BlogDetail = () => {
                         <div className="relative w-full">
                           <div aria-hidden="true" className="absolute scale-75 md:scale-110 inset-0 m-auto w-full h-full md:w-96 md:h-96 rounded-full rotate-45 bg-gradient-to-r from-sky-500 to-cyan-300 blur-3xl"></div>
                           <img src={blog.blogImages[0]} className="relative w-full" alt="wath illustration roudend-md" loading="lazy" width="320" height="280" />
-                          {/* <Blog  className="relative w-full" width="320" height="280" /> */}
                         </div>
                       </div>
                     </div>
@@ -243,14 +241,16 @@ const BlogDetail = () => {
                     </div>
                   </div>
                 </div>
+                <div className="flext justify-right items-right pl-24 my-8">
+                  <h3 className="text-semibold text-3xl   pb-3 mb-3"> Other content by {blog.user.firstName}</h3>
+                  <Carousel />
+                </div>
               </div>
 
             ) : (<div>Loading...</div>
             )}
-            <div className="px-2 max-w-lg mx-auto my-8">
-
-            </div>
           </div>
+
           <Footer />
         </div>
       </div>
