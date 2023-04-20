@@ -5,9 +5,8 @@ import { Link } from 'react-router-dom';
 import Button from './Button';
 import { userProfileData } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
-import avatar from '../data/avatar.jpg';
 import AuthContext from "../context/Auth/authContext";
-
+import avatar from '../assets/fitsum.png';
 const UserProfile = ({ onLogout }) => {
   const { currentColor } = useStateContext();
   const authContext = useContext(AuthContext);
@@ -34,8 +33,8 @@ const UserProfile = ({ onLogout }) => {
         />
         {user &&
           <div>
-            <p className="font-semibold text-xl dark:text-gray-200"> {user.name} </p>
-            <p className="text-gray-500 text-sm dark:text-gray-400">  Admin   </p>
+            <p className="font-semibold text-xl dark:text-gray-200"> {user.firstName} </p>
+            <p className="text-gray-500 text-sm dark:text-gray-400">  User   </p>
             <p className="text-gray-500 text-sm font-semibold dark:text-gray-400"> {user.email}</p>
           </div>
         }

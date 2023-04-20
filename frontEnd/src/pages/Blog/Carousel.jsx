@@ -11,17 +11,17 @@ import svg4 from '../../assets/undraw_virtual_assistant_jjo2.svg'
 const items = [
     {
         icon: svg1,
-        excerpt: "Team collaboration has become a vital aspect of modern-day work culture. With the advancements in technology, it's easier than ever to work together with colleagues, regardless of their location. Tools such as Microsoft Teams, Slack, and Asana have transformed the way teams work together by enabling real-time communication, file sharing, and project management...",
+        excerpt: "Team collaboration has become a vital aspect of modern-day work culture.  it's easier than ever...",
         title: "Study Smarter, Not Harder",
     },
     {
         icon: svg2,
-        excerpt: "Online study tools such as Quizlet, Duolingo, and Khan Academy have made it easier than ever before to access educational content and study resources from anywhere in the world. With these tools, learners can enhance their knowledge and skills in a particular subject, customize their learning experience, and study at their own pace. Online study tools are particularly helpful for students who are looking to supplement their classroom learning or prepare for exams...       ",
+        excerpt: "Online study tools such as Quizlet, Duolingo, and Khan Academy have made it easier than ever before to access educational content and study resources from anywhere in the world. With these tools, learners can enhance their knowledge and skills in a particular subject, ...       ",
         title: "Revolutionize Your Study Habits",
     },
     {
         icon: svg3,
-        excerpt: "The internet has revolutionized the way we access information and resources. When it comes to education and learning, online assistance platforms such as Khan Academy, Coursera, and Udemy have played a crucial role in helping learners access quality education and training remotely. These platforms offer a wealth of resources to help learners achieve their goals and enhance their knowledge and skills...",
+        excerpt: "The internet has revolutionized the way we access information and  These platforms offer a wealth of resources to help learners achieve their goals and enhance their knowledge and skills...",
         title: "Taking Your Education to the Next Level",
     },
     {

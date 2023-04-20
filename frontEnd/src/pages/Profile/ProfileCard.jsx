@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '../../data/avatar.jpg'
+import avatar from '../../assets/fitsum.png';
 
 const ProfileCard = ({ name, currentColor }) => {
   return (
