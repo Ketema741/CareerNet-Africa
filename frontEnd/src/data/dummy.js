@@ -25,7 +25,7 @@ export const schedule = [
   {
     icon: <MdOutlineWork />,
     amount: '39,354',
-    person: 'Mr. Hackathon',
+    person: 'hackathon@gmail.com',
     title: 'Exploring career paths',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -35,7 +35,7 @@ export const schedule = [
 
     icon: <TbCirclesRelation />,
     amount: '4,396',
-    person: 'Betselot',
+    person: 'betsi@gmail.com',
     title: 'Networking and building professional relationships',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
@@ -44,7 +44,7 @@ export const schedule = [
   {
     icon: <AiOutlineRead />,
     amount: '423,39',
-    person: 'Yohanis',
+    person: 'yoni@gmail.com',
     title: 'Resume and cover letter writing',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -63,7 +63,7 @@ export const schedule = [
   {
     icon: <BsCompass />,
     amount: '39,354',
-    person: 'Ketema',
+    person: 'kgirma@gmail.com',
     title: 'Finding and applying for internships',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -73,7 +73,7 @@ export const schedule = [
 
     icon: <FaBusinessTime />,
     amount: '4,396',
-    person: 'Tamirat',
+    person: 'tame@gmail.com',
     title: 'Entrepreneurship and starting a business',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
@@ -82,7 +82,7 @@ export const schedule = [
   {
     icon: <GiSkills />,
     amount: '423,39',
-    person: 'Roza',
+    person: 'Roza rozi@gmail.com',
     title: 'Developing relevant skills:',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -93,7 +93,7 @@ export const schedule = [
   {
     icon: <GrNavigate />,
     amount: '39,354',
-    person: 'Dema Amano',
+    person: 'Dema dame@gmail.com',
     title: 'Navigating workplace culture',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -102,7 +102,7 @@ export const schedule = [
   {
     icon: <GiBookshelf />,
     amount: '423,39',
-    person: 'Gawetch Tap',
+    person: 'Gawetch tap@gmail.com',
     title: 'Course and major selection',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -112,7 +112,7 @@ export const schedule = [
   {
     icon: <GiBodyBalance />,
     amount: '39,354',
-    person: '110',
+    person: '101@gmail.com',
     title: 'Balancing work and personal life',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -121,7 +121,7 @@ export const schedule = [
   {
     icon: <MdContentPasteSearch />,
     amount: '423,39',
-    person: 'Getu',
+    person: 'Getu getch@gmail.com',
     title: 'Job search strategies',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -131,11 +131,10 @@ export const schedule = [
   
 
   // here
-
   {
     icon: <FaUniversity />,
     amount: '39,354',
-    person: 'Tseganesh',
+    person: 'Tseganesh tsige@gmail.com',
     title: 'Campus involvement',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -145,7 +144,7 @@ export const schedule = [
 
     icon: <GiSandsOfTime />,
     amount: '4,396',
-    person: 'Kidus',
+    person: 'Kidus kidus@gmail.com',
     title: 'Time management',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
@@ -154,7 +153,7 @@ export const schedule = [
   {
     icon: <AiOutlineRead />,
     amount: '423,39',
-    person: 'Betselot',
+    person: 'betsi@gmail.com',
     title: 'Internships and work experience',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -164,7 +163,7 @@ export const schedule = [
   {
     icon: <GiHabitatDome />,
     amount: '39,354',
-    person: 'Gedion',
+    person: 'Gedion gedion@gmail.com',
     title: 'Study habits',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
@@ -173,7 +172,7 @@ export const schedule = [
   {
     icon: <MdOutlineWork />,
     amount: '39,354',
-    person: 'Ketema G.',
+    person: 'Ketema g@gmail.com',
     title: 'Career exploration',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -183,8 +182,8 @@ export const schedule = [
 
     icon: <FcBusinessman />,
     amount: '4,396',
-    person: 'Joseph',
-    title: 'Entrepreneurship and starting a business',
+    person: 'josi@gmail.com',
+    title: 'Entrepreneurship & starting a business',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
@@ -192,7 +191,7 @@ export const schedule = [
   {
     icon: <SiFuturelearn />,
     amount: '423,39',
-    person: 'Dawit A.',
+    person: 'Dawit dev@gmail.com',
     title: 'Developing relevant skills:',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -203,7 +202,7 @@ export const schedule = [
   {
     icon: <FaRegCompass />,
     amount: '39,354',
-    person: 'Fitsum',
+    person: 'Fitsum fitsum@gmail.com',
     title: 'Navigating workplace culture',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -212,8 +211,8 @@ export const schedule = [
   {
     icon: <SiBookstack />,
     amount: '423,39',
-    person: 'Mr. Abdurahman',
-    title: 'Course and major selection',
+    person: 'Mr. Abdurahman abdu@gmail.com',
+    title: 'Course & major selection',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
     

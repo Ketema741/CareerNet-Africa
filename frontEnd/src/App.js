@@ -13,7 +13,7 @@ import {
   Login,
   Register,
   Profile,
-  Category,
+  Scheduler
 } from './pages';
 
 import { useStateContext } from './context/ContextProvider';
@@ -54,7 +54,7 @@ const App = () => {
               <Route path="/jobs" element={<JobPage />} />
               <Route path="/job/:jobId" element={<JobDetail />} />
 
-              <Route path="/Category" element={<Category />} />
+              <Route path="/scheduler" element={<Scheduler />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
 
