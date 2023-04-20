@@ -30,7 +30,7 @@ const BlogSchema = new Schema({
 		required: true
 	},
 	steps: {
-		type: String,
+		type: [String],
 	},
 	timeline: {
 		type: [String],

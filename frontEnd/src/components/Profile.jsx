@@ -42,7 +42,7 @@ const UserProfile = ({ onLogout }) => {
       </div>
       <div>
         {userProfileData.map((item, index) => (
-          <Link to={item.url}>
+          <Link to={`/${item.url}`}>
             <div key={index} className="flex gap-5 border-b-1 border-color p-4 hover:bg-light-gray cursor-pointer  dark:hover:bg-[#a5c2f4]">
 
               <button

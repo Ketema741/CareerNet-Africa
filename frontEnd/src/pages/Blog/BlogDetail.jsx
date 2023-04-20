@@ -31,8 +31,8 @@ const BlogDetail = () => {
   const { current, blog, filtered, getBlog, setCurrent, filterBlogs } = blogContext;
 
 
-  const handleView = (item) => {
-    setCurrent(item)
+  const handleView = (post) => {
+    setCurrent(post)
   }
   const handleCategory = (category) => {
     filterBlogs(category)
@@ -67,9 +67,6 @@ const BlogDetail = () => {
     setCurrentMode,
     currentMode,
     activeMenu,
-    currentColor,
-    themeSettings,
-    setThemeSettings,
   } = useStateContext();
 
   useEffect(() => {
@@ -79,9 +76,21 @@ const BlogDetail = () => {
       setCurrentColor(currentThemeColor);
       setCurrentMode(currentThemeMode);
     }
+
   }, []);
 
-  const editing = { allowDeleting: true, allowEditing: true };
+  const chunks = [];
+  useEffect(() => {
+    if (blog) {
+      for (let i = 0; i < blog.takeaways; i += 3) {
+        chunks.push(blog.takeaways.slice(i, i + 3));
+      }
+      console.log(chunks);
+    }
+  }, [blog])
+
+
+
   return (
 
 
@@ -122,7 +131,6 @@ const BlogDetail = () => {
 
                       <span className="relative text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
                         Discover the Insights and Tips on Our Blog!
-
                       </span>
                     </h1>
                     <div className="lg:flex">
@@ -132,56 +140,24 @@ const BlogDetail = () => {
                           {Parse(blog.summary)}
                         </p>
                         <p className="text-xl font-bold text-gray-600 dark:text-gray-400">
-                          List of 7 Key takeaways.
+                          List of {blog.takeaways.length} Key takeaways.
                         </p>
-                        <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
-                          <a aria-label="add to slack" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30">
-                            <div className="flex justify-center space-x-4">
 
-                              <SiBookstack className='w-6 h-6' style={{ color: '#03C9D7' }} />
-                              <span className="hidden font-medium md:block dark:text-white">
-                                Resume
-                              </span>
-                            </div>
-                          </a>
-                          <a aria-label="add to chat" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-green-400 hover:shadow-lg hover:shadow-lime-600/20 dark:hover:border-green-300/30">
-                            <div className="flex justify-center space-x-4">
-                              <FaConnectdevelop className='w-6 h-6' style={{ color: '#03C9D7' }} />
-                              <span className="hidden font-medium md:block dark:text-white">Career Paths</span>
-                            </div>
-                          </a>
-                          <a aria-label="add to zoom" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/20 dark:hover:border-blue-300/30">
-                            <div className="flex justify-center space-x-4">
-                              <GiGraduateCap className='w-6 h-6' style={{ color: '#03C9D7' }} />
-                              <span className="hidden font-medium md:block dark:text-white">Internships</span>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
-                          <a aria-label="add to slack" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30">
-                            <div className="flex justify-center space-x-4">
-                              <CgCommunity className='w-6 h-6' style={{ color: '#03C9D7' }} />
-                              <span className="hidden font-medium md:block dark:text-white">
-                                Soft Skills
-                              </span>
-                            </div>
-                          </a>
-                          <a aria-label="add to chat" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-green-400 hover:shadow-lg hover:shadow-lime-600/20 dark:hover:border-green-300/30">
-                            <div className="flex justify-center space-x-4">
-                              <GiLifeSupport className='w-6 h-6' style={{ color: '#03C9D7' }} />
-                              <span className="hidden font-medium md:block dark:text-white">
-                                Personal Branding
-                              </span>
-                            </div>
-                          </a>
-                          <a aria-label="add to zoom" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/20 dark:hover:border-blue-300/30">
-                            <div className="flex justify-center space-x-4">
-                              <GiOfficeChair className='w-6 h-6' style={{ color: '#03C9D7' }} />
-                              <span className="hidden font-medium md:block dark:text-white">
-                                Industry Insights
-                              </span>
-                            </div>
-                          </a>
+
+                        <div className="flex flex-wrap space-y-3 justify-between min-w-[300px]">
+                          {blog.takeaways.map((takes, index) => (
+                            <a aria-label="add to slack" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30">
+                              <div className="flex justify-center space-x-4">
+                                <CgCommunity className='w-6 h-6' style={{ color: '#03C9D7' }} />
+                                <span className="hidden font-medium md:block dark:text-white">
+                                  {takes}
+                                </span>
+                              </div>
+                            </a>
+                          )
+                          )}
+
+
                         </div>
                         <div className="grid grid-cols-2 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
                           <a aria-label="add to slack" href="#detail" className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30">
@@ -194,10 +170,10 @@ const BlogDetail = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="mt-12 md:mt-0 lg:absolute -right-10 lg:w-7/12">
+                      <div className="mt-12 md:mt-0 lg:absolute -right-10 lg:w-7/12" style={{ maxWidth: '550px', zInde: 0 }}>
                         <div className="relative w-full">
                           <div aria-hidden="true" className="absolute scale-75 md:scale-110 inset-0 m-auto w-full h-full md:w-96 md:h-96 rounded-full rotate-45 bg-gradient-to-r from-sky-500 to-cyan-300 blur-3xl"></div>
-                          <img src={Blog} className="relative w-full" alt="wath illustration" loading="lazy" width="320" height="280" />
+                          <img src={blog.blogImages[0]} className="relative w-full" alt="wath illustration roudend-md" loading="lazy" width="320" height="280" />
                           {/* <Blog  className="relative w-full" width="320" height="280" /> */}
                         </div>
                       </div>

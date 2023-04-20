@@ -8,7 +8,7 @@ app.use(cors());
  
 // connect Database
 connectDB();
- 
+
 // Init Middleware
 app.use(express.static("public"));
 app.use(express.json({ limit: "50mb" }));
