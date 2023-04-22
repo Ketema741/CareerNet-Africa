@@ -7,6 +7,8 @@ import { userProfileData } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
 import AuthContext from "../context/Auth/authContext";
 import avatar from '../assets/fitsum.png';
+
+
 const UserProfile = ({ onLogout }) => {
   const { currentColor } = useStateContext();
   const authContext = useContext(AuthContext);

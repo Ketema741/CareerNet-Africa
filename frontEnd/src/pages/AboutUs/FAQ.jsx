@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
-import { FiSettings } from 'react-icons/fi';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Navbar, Footer, Sidebar, ThemeSettings } from '../../components';
+import { Navbar, Footer, Sidebar } from '../../components';
 import FAQCard from './FAQCard';
 import { useStateContext } from '../../context/ContextProvider';
 import FAQAnswers from '../../assets/undraw_questions_re_1fy7.svg'
 
 const FAQ = () => {
-  const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+  const { setCurrentColor, setCurrentMode, currentMode, activeMenu } = useStateContext();
 
   useEffect(() => {
     const currentThemeColor = localStorage.getItem('colorMode');
@@ -22,24 +20,8 @@ const FAQ = () => {
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <div className="flex relative dark:bg-main-dark-bg">
-        <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
-          <TooltipComponent
-            content="Settings"
-            position="Top"
-          >
-            <button
-              type="button"
-              onClick={() => setThemeSettings(true)}
-              style={{ background: currentColor, borderRadius: '50%' }}
-              className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-            >
-              <FiSettings />
-            </button>
-
-          </TooltipComponent>
-        </div>
         {activeMenu ? (
-          <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
+          <div className="w-64 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
             <Sidebar />
           </div>
         ) : (
@@ -57,7 +39,6 @@ const FAQ = () => {
           <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
             <Navbar />
           </div>
-          {themeSettings && (<ThemeSettings />)}
           <div className="mt-16 ">
             <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
               <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">

@@ -1,14 +1,12 @@
 import React, { useEffect, Fragment, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { FiShoppingCart } from 'react-icons/fi';
 import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import avatar from '../data/avatar.jpg';
-
+import { RxAvatar } from 'react-icons/rx'
 import Notification from './Notification';;
 import Profile from './Profile'
 
@@ -17,7 +15,7 @@ import { useStateContext } from '../context/ContextProvider';
 
 
 const GuestLinks = (
-  <div className="flex  gap-x-5">
+  <div className="flex justify-center items-center gap-x-5">
     <Link className="pt-2 cursor-pointer hover:bg-light-gray rounded-lg" to="/register">
       Register
     </Link>
@@ -36,10 +34,10 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       style={{ color }}
       className="relative text-xl rounded-full p-3 hover:bg-light-gray"
     >
-      <span
+      {/* <span
         style={{ background: dotColor }}
         className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
-      />
+      /> */}
       {icon}
     </button>
   </TooltipComponent>
@@ -48,7 +46,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const authContext = useContext(AuthContext);
-  const { isUserAuthenticated, user, logout } = authContext;
+  const { isUserAuthenticated, logout } = authContext;
 
   const {
     currentColor,
@@ -85,7 +83,7 @@ const Navbar = () => {
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div className="flex justify-between bg-gray-100 dark:bg-gray-800 dark:border-gray-700 shadow-2xl relative ">
+    <div className="flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md relative h-20">
 
       <NavButton
         title="Menu"
@@ -97,8 +95,6 @@ const Navbar = () => {
       <div className="flex">
         {isUserAuthenticated ?
           <Fragment>
-           
-
             <div className="hidden sm:block">
               <NavButton
                 title="Chat"
@@ -112,7 +108,7 @@ const Navbar = () => {
             <div className="hidden sm:block">
               <NavButton
                 title="Notification"
-                dotColor="rgb(254, 201, 15)"
+                dotColor="#FF5C8E"
                 customFunc={() => handleClick("notification")}
                 color={currentColor}
                 icon={<RiNotification3Line />}
@@ -123,11 +119,12 @@ const Navbar = () => {
                 className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
                 onClick={() => handleClick("userProfile")}
               >
-                <img
+                {/* <img
                   className="rounded-full w-8 h-8"
-                  src={avatar}
+                  src={RxAvatar}
                   alt="user-profile"
-                />
+                /> */}
+                <RxAvatar className="rounded-full w-7 h-7" />
                 <MdKeyboardArrowDown className="text-gray-400 text-14" />
               </div>
             </TooltipComponent>

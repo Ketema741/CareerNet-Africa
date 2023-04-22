@@ -32,7 +32,7 @@ const JobPage = () => {
         <div className={currentMode === "Dark" ? "dark" : ""}>
             <div className="flex relative dark:bg-main-dark-bg">
                 {activeMenu ? (
-                    <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
+                    <div className="w-64 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
                         <Sidebar />
                     </div>
                 ) : (

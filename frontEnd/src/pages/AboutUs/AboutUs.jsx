@@ -1,23 +1,19 @@
 import React, { useEffect } from 'react';
-import { FiSettings } from 'react-icons/fi';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Navbar, Footer, Sidebar, ThemeSettings } from '../../components';
+import { Navbar, Footer, Sidebar } from '../../components';
 import { useStateContext } from '../../context/ContextProvider';
 import Ketema from '../../assets/me.png'
 import Dawit from '../../assets/dev.png'
 import Fitsum from '../../assets/fitsum.png'
-import Gatwech from '../../data/avatar3.png'
 import joseph from '../../data/joseph.jpg'
 import AboutUsCard from './AboutUsCard';
+
 const AboutUs = () => {
   const {
     setCurrentColor,
     setCurrentMode,
     currentMode,
     activeMenu,
-    currentColor,
-    themeSettings,
-    setThemeSettings,
+
   } = useStateContext();
 
   useEffect(() => {
@@ -33,20 +29,8 @@ const AboutUs = () => {
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <div className=" flex relative dark:bg-main-dark-bg">
-        <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
-          <TooltipComponent content="Settings" position="Top">
-            <button
-              type="button"
-              onClick={() => setThemeSettings(true)}
-              style={{ background: currentColor, borderRadius: "50%" }}
-              className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-            >
-              <FiSettings />
-            </button>
-          </TooltipComponent>
-        </div>
         {activeMenu ? (
-          <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
+          <div className="w-64 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
             <Sidebar />
           </div>
         ) : (
@@ -64,7 +48,6 @@ const AboutUs = () => {
           <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
             <Navbar />
           </div>
-          {themeSettings && <ThemeSettings />}
           <AboutUsCard />
 
 
@@ -129,7 +112,7 @@ const AboutUs = () => {
                     width="640"
                     height="805"
                   />
-                  
+
                   <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
                     <div>
                       <h4 class="text-xl font-semibold dark:text-gray-700 text-white">Fitsum .</h4>
