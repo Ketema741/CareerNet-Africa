@@ -10,10 +10,13 @@ import {
   JobDetail,
   Blogs,
   BlogDetail,
+  InternshipDetial,
+  Internships,
   Login,
   Register,
   Profile,
-  Scheduler
+  Scheduler, 
+  Posting
 } from './pages';
 
 import { useStateContext } from './context/ContextProvider';
@@ -51,6 +54,11 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blog/:blogId" element={<BlogDetail />} />
+              <Route path="/blog-posting" element={<Posting />} />
+
+              <Route path="/internship" element={<Internships />} />
+              <Route path="/internship/:blogId" element={<InternshipDetial />} />
+
               <Route path="/jobs" element={<JobPage />} />
               <Route path="/job/:jobId" element={<JobDetail />} />
 

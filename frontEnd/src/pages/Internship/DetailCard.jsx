@@ -120,7 +120,7 @@ const JobDetailCard = () => {
                 </div>
                 <div className="mt-8 relative w-full">
                     <div className="sm:ml-0 sm:mr-4 md:ml-24 bg-white shadow-lg rounded-lg p-8 pb-12 mb-8" style={{ width: "550px", zIndex: 0 }}>
-                        <h3 className="text-xl mb-8 font-semibold border-b pb-4">Apply Now</h3>
+                        <h3 className="text-xl mb-8 font-semibold border-b pb-4">Contact Us </h3>
 
                         <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
                             <a
@@ -134,7 +134,7 @@ const JobDetailCard = () => {
                                         style={{ color: "#03C9D7" }}
                                     />
                                     <span className="hidden font-medium md:block dark:text-white">
-                                        Apply
+                                        Contact
                                     </span>
                                 </div>
                             </a>

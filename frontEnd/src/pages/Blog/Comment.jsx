@@ -4,7 +4,7 @@ import { useStateContext } from '../../context/ContextProvider';
 
 const CommentSection = ({ blog }) => {
   const { currentColor } = useStateContext();
-  const [comments, setComments] = useState(blog.comments);
+  const [comments, setComments] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [comment, setComment] = useState('');

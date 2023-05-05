@@ -13,10 +13,9 @@ const JobCard = ({ post }) => {
   };
   return (
     <div className="mt-24 container px-5 mx-auto">
-      {/* demo shit start here */}
       <div className="py-16">
         <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
-          <div className="grid gap-6 lg:grid-cols-7">
+          <div className="grid gap-6 lg:grid-cols-6 px-16">
             <div className="lg:col-span-3">
               <div className="space-y-4 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none bg-white dark:bg-gray-800 px-8 py-12  sm:px-12 lg:px-8">
                 <img

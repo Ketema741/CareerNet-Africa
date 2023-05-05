@@ -1,13 +1,12 @@
 import React from 'react';
-import { RiContactsLine } from 'react-icons/ri';
 import { BsCompass } from 'react-icons/bs';
 import { MdOutlineWork, MdOutlineSupportAgent, MdContentPasteSearch, MdOutlineManageAccounts, MdOutlineMail } from 'react-icons/md';
 import { FcAbout, FcBusinessman } from 'react-icons/fc';
 import { SiSkillshare, SiBookstack, SiFuturelearn } from 'react-icons/si'
 import { TbCirclesRelation } from 'react-icons/tb'
-import { AiOutlineRead } from 'react-icons/ai'
+import { AiOutlineRead, AiOutlineCloudUpload } from 'react-icons/ai'
 import { FaBusinessTime, FaUniversity, FaRegCompass } from 'react-icons/fa'
-import { GiSkills, GiBookshelf, GiBodyBalance, GiSandsOfTime, GiHabitatDome } from 'react-icons/gi'
+import { GiSkills, GiBookshelf, GiBodyBalance,GiLifeSupport, GiSandsOfTime, GiHabitatDome } from 'react-icons/gi'
 import { GrNavigate } from 'react-icons/gr'
 
 export const Categories = [
@@ -32,8 +31,8 @@ export const schedule = [
     amount: '4,396',
     person: 'betsi@gmail.com',
     title: 'Networking and building professional relationships',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
+    iconColor: '#A4BC92',
+    iconBg: '#DDFFBB',
     pcColor: 'green-600',
   },
   {
@@ -41,8 +40,8 @@ export const schedule = [
     amount: '423,39',
     person: 'yoni@gmail.com',
     title: 'Resume and cover letter writing',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+   iconColor: 'rgb(0, 194, 146)',
+    iconBg: '#3A98B9',
 
     pcColor: 'green-600',
   },
@@ -70,8 +69,8 @@ export const schedule = [
     amount: '4,396',
     person: 'tame@gmail.com',
     title: 'Entrepreneurship and starting a business',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
+    iconColor: '#A4BC92',
+    iconBg: '#DDFFBB',
     pcColor: 'green-600',
   },
   {
@@ -79,8 +78,8 @@ export const schedule = [
     amount: '423,39',
     person: 'Roza rozi@gmail.com',
     title: 'Developing relevant skills:',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+   iconColor: 'rgb(0, 194, 146)',
+    iconBg: '#3A98B9',
     pcColor: 'green-600',
   },
 
@@ -98,8 +97,8 @@ export const schedule = [
     amount: '423,39',
     person: 'Gawetch tap@gmail.com',
     title: 'Course and major selection',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+   iconColor: 'rgb(0, 194, 146)',
+    iconBg: '#3A98B9',
     pcColor: 'green-600',
   },
   {
@@ -116,8 +115,8 @@ export const schedule = [
     amount: '423,39',
     person: 'Getu getch@gmail.com',
     title: 'Job search strategies',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+   iconColor: 'rgb(0, 194, 146)',
+    iconBg: '#3A98B9',
 
     pcColor: 'green-600',
   },
@@ -139,8 +138,8 @@ export const schedule = [
     amount: '4,396',
     person: 'Kidus kidus@gmail.com',
     title: 'Time management',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
+    iconColor: '#A4BC92',
+    iconBg: '#DDFFBB',
     pcColor: 'green-600',
   },
   {
@@ -148,8 +147,8 @@ export const schedule = [
     amount: '423,39',
     person: 'betsi@gmail.com',
     title: 'Internships and work experience',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+    iconColor: '#FFEAAA',
+    iconBg: '#3A98B9',
 
     pcColor: 'green-600',
   },
@@ -177,8 +176,8 @@ export const schedule = [
     amount: '4,396',
     person: 'josi@gmail.com',
     title: 'Entrepreneurship & starting a business',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
+    iconColor: '#AA8E39',
+    iconBg: '#FFEAAA',
     pcColor: 'green-600',
   },
   {
@@ -186,8 +185,8 @@ export const schedule = [
     amount: '423,39',
     person: 'Dawit dev@gmail.com',
     title: 'Developing relevant skills:',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+   iconColor: 'rgb(0, 194, 146)',
+    iconBg: '#3A98B9',
 
     pcColor: 'green-600',
   },
@@ -206,8 +205,8 @@ export const schedule = [
     amount: '423,39',
     person: 'Mr. Abdurahman abdu@gmail.com',
     title: 'Course & major selection',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+   iconColor: 'rgb(0, 194, 146)',
+    iconBg: '#3A98B9',
 
     pcColor: 'green-600',
   },
@@ -255,9 +254,17 @@ export const userProfileData = [
     icon: <MdOutlineMail />,
     title: 'My Inbox',
     url: 'profile',
-    desc: 'Messages & Emails',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
+    desc: 'Messages',
+    iconColor: 'rgb(87, 125, 134)',
+    iconBg: 'rgb(185, 237, 221)',
+  },
+  {
+    icon: <AiOutlineCloudUpload />,
+    title: 'Blog Post',
+    url: 'blog-posting',
+    desc: 'Make A Post',
+    iconColor: '#A4BC92',
+    iconBg: '#DDFFBB',
   }
 ];
 
@@ -272,14 +279,19 @@ export const links = [
         icon: <MdOutlineWork />,
       },
       {
-        name: 'Blogs',
+        name: 'Internships',
+        to: 'internship',
+        icon: <SiFuturelearn />,
+      },
+      {
+        name: 'Guidance',
         to: 'blogs',
-        icon: <RiContactsLine />,
+        icon: <GiLifeSupport />,
       },
     ],
   },
   {
-    title: 'CareerNet ',
+    title: 'Career Net ',
     links: [
       {
         name: 'About Us',
