@@ -15,13 +15,15 @@ import {
   Login,
   Register,
   Profile,
-  Scheduler, 
+  Scheduler,
   Posting
 } from './pages';
 
 import { useStateContext } from './context/ContextProvider';
 import AuthState from './context/Auth/AuthState';
 import BlogState from './context/blog/BlogState';
+import InternshipState from './context/internship/InternshipState';
+import JobState from './context/job/JobState';
 
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
@@ -46,33 +48,37 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <AuthState>
-        <BlogState>
+        <JobState>
+          <InternshipState>
+            <BlogState>
 
-          <Router>
-            <Routes>
-              {/* dashboard  */}
-              <Route path="/" element={<Home />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/blog/:blogId" element={<BlogDetail />} />
-              <Route path="/blog-posting" element={<Posting />} />
+              <Router>
+                <Routes>
+                  {/* dashboard  */}
+                  <Route path="/" element={<Home />} />
+                  <Route path="/blogs" element={<Blogs />} />
+                  <Route path="/blog/:blogId" element={<BlogDetail />} />
+                  <Route path="/blog-posting" element={<Posting />} />
 
-              <Route path="/internship" element={<Internships />} />
-              <Route path="/internship/:blogId" element={<InternshipDetial />} />
+                  <Route path="/internship" element={<Internships />} />
+                  <Route path="/internship/:blogId" element={<InternshipDetial />} />
 
-              <Route path="/jobs" element={<JobPage />} />
-              <Route path="/job/:jobId" element={<JobDetail />} />
+                  <Route path="/jobs" element={<JobPage />} />
+                  <Route path="/job/:jobId" element={<JobDetail />} />
 
-              <Route path="/scheduler" element={<Scheduler />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+                  <Route path="/scheduler" element={<Scheduler />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
 
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/aboutus" element={<AboutUs />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/aboutus" element={<AboutUs />} />
 
-              <Route path="/profile" element={<Profile />} />
-            </Routes>
-          </Router>
-        </BlogState>
+                  <Route path="/profile" element={<Profile />} />
+                </Routes>
+              </Router>
+            </BlogState>
+          </InternshipState>
+        </JobState>
       </AuthState>
     </ApolloProvider>
   );

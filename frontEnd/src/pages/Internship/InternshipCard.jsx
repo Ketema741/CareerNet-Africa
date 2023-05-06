@@ -12,7 +12,7 @@ const InternshipCard = () => {
     <div className="relative py-24">
       <div className="container relative m-auto px-6 text-gray-500 md:px-12">
         <div className="grid gap-6 md:mx-auto md:w-8/12 lg:w-full lg:grid-cols-3">
-          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
+          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none hover:scale-105">
             <img
               className="mx-auto w-24"
               src={Intern1}
@@ -31,7 +31,7 @@ const InternshipCard = () => {
               <FaArrowRight className="text-primary" />
             </Link>
           </div>
-          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
+          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none hover:scale-105">
             <img
               className="mx-auto w-24"
               src={Intern2}
@@ -51,7 +51,7 @@ const InternshipCard = () => {
               <FaArrowRight className="text-primary" />
             </Link>
           </div>
-          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
+          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none hover:scale-105">
             <img
               className="mx-auto w-24"
               src={Intern3}
