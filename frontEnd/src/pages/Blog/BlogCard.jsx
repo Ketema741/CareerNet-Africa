@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { useStateContext } from "../../context/ContextProvider";
-import prodcut1 from '../../assets/undraw_connecting_teams_re_hno7.svg'
 import { useNavigate } from 'react-router-dom';
 import BlogContext from './../../context/blog/blogContext';
 

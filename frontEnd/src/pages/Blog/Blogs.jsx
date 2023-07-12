@@ -1,7 +1,5 @@
 import React, { useEffect, useContext, Fragment, useRef } from 'react';
 
-import { Link } from 'react-router-dom';
-import blogContext from '../../context/blog/blogContext';
 import { FiSearch } from 'react-icons/fi'
 
 import { Navbar, Footer, Sidebar } from '../../components';

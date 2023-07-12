@@ -78,48 +78,7 @@ const AboutUs = () => {
                       <span class="block text-sm text-gray-500">CEO-Founder</span>
                     </div>
                     <p class="mt-8 text-gray-300 dark:text-gray-600">
-                      I am a computer science student with a passion for using technology to make a positive impact in society
-                    </p>
-                  </div>
-
-                </div>
-                <div class="group relative rounded-3xl  space-y-6 overflow-hidden">
-                  <img
-                    class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-                    src={joseph}
-                    alt="Joseph"
-                    loading="lazy"
-                    width="640"
-                    height="805"
-                  />
-                  <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
-                    <div>
-                      <h4 class="text-xl font-semibold dark:text-gray-700 text-white">Joseph Birara</h4>
-                      <span class="block text-sm text-gray-500">CEO-Founder</span>
-                    </div>
-                    <p class="mt-8 text-gray-300 dark:text-gray-600">
-                      I am a computer science student with a passion for using technology to make a positive impact in society
-                    </p>
-                  </div>
-
-                </div>
-                <div class="group relative rounded-3xl  space-y-6 overflow-hidden">
-                  <img
-                    class="mx-auto h-[26rem] w-full grayscale object-cover object-top transition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-                    src={Fitsum}
-                    alt="Fitsum"
-                    loading="lazy"
-                    width="640"
-                    height="805"
-                  />
-
-                  <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
-                    <div>
-                      <h4 class="text-xl font-semibold dark:text-gray-700 text-white">Fitsum .</h4>
-                      <span class="block text-sm text-gray-500">CEO-Founder</span>
-                    </div>
-                    <p class="mt-8 text-gray-300 dark:text-gray-600">
-                      I am a computer science student with a passion for using technology to make a positive impact in society
+                      Computer Science Graduate | MERN Stack Developer | Algorithmic Problem Solver | Seeking Opportunities to Drive Technological Innovation
                     </p>
                   </div>
 
