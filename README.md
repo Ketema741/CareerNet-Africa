@@ -9,7 +9,7 @@
 
 <br/>
 
-#### Here are some of the screen shots of our hacktron project
+## Here are some of the screen shots of our hacktron project
 
 <hr />
 
@@ -44,14 +44,16 @@
 
 
 <br/>
-<br/>
-
+<br />
 
 ## Developers
 
 <hr/>
 <img src="https://github.com/dawit01/CareerNet-Africa/assets/84455217/014ace70-5e39-4ce5-a785-9aa6920edc66" alt="Image description" width="500" height="300">
 
+
+
+## Thanks.
 
 
 
