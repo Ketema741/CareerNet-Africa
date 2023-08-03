@@ -1,4 +1,3 @@
-# Welcome to the CareerNet Africa repository, developed during the A2SV internal Hackathon event!
 
 <br>
 <hr>
@@ -54,7 +53,5 @@
 
 
 ## Thanks.
-
-
 
 
