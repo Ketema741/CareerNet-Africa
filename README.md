@@ -48,13 +48,15 @@
 ## Developers
 
 <hr/>
-<img src="https://github.com/dawit01/CareerNet-Africa/assets/84455217/014ace70-5e39-4ce5-a785-9aa6920edc66" alt="Image description" width="600" height="300">
+<img src="https://github.com/dawit-andargachew/CareerNet-Africa/assets/84455217/ff1925ed-b7f1-4fcf-a682-4373bff6f419" width="600" height="300">
 
 
 ## Developer's GitHub Profile
 
 ### [Dawit Andargachew](https://github.com/dawit01)
 ### [Ketema Girma](https://github.com/Ketema741)
+### [Fitsum Gedefaw](https://github.com/Ketema741)
+### [Joseph Birara](https://github.com/joseph-birara)
 
 <br />
 
